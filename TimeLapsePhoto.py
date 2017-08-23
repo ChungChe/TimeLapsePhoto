@@ -14,7 +14,7 @@ import os
 class timeLapseWidget(QWidget):
     def __init__(self, parent=None):
         super(timeLapseWidget, self).__init__(parent)
-        self.duration = 5 # take a photo for every 25 seconds
+        self.duration = 25 # take a photo for every 25 seconds
         self.createWidgets()
         self.setWindowTitle(u"縮時攝影")
         self.timer = QTimer()
