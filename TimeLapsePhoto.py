@@ -21,7 +21,7 @@ class timeLapseWidget(QWidget):
     def take_a_photo(self):
         file_name = "/home/pi/photos/{}.jpg".format(strftime("%Y_%m_%d_%H_%M_%S")) 
         #self.status_label.setText(u"{}".format(file_name))
-        os.system("fswebcam -p YUYV -d /dev/video0 -r 640x480 {}".format(file_name))
+        os.system("fswebcam -p YUYV -S 10 -d /dev/video0 -r 640x480 {}".format(file_name))
         os.system("jpegoptim {} --strip-all".format(file_name))
         
         pix = QPixmap(file_name)
